@@ -3,7 +3,7 @@ PVector puntoA, puntoB, puntoC, puntoD;
 
 
 public void setup (){
-  size(400,400);
+  size(500,500);
   distancia=60;
   puntoA = new PVector(0,distancia);
   

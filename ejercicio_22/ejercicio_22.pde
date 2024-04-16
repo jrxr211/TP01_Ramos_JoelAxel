@@ -1,26 +1,28 @@
+int linea, y;
+
 void setup(){
-  size(600,600);
-  int lineaX = 0;
-  int lineaY = 100;
-  int circuloY = 75;
-  int distanciaCirculo = 30;
-
+  size (600,600);
+  linea= 120;
+  y= 100;
+  dibujarLineas();
+  dibujarCirculos();
+}
+void draw(){}
+void dibujarLineas(){
   do{
-            int circuloX = distanciaCirculo;
-
+    stroke(0,0,255);
+    strokeWeight(5);
+    line(0,linea,width,linea);
+    linea+=100;
+  }while(linea<=height);
+}
+void dibujarCirculos(){
 do{
-    stroke(#008DFC);
-    line(lineaX,lineaY,width,lineaY); 
-    fill(random(255), random(255), random(255)); 
-    stroke(0);
-    strokeWeight(2);
-    ellipse(circuloX,circuloY,50,50);
-    circuloX += distanciaCirculo*2;
-
- 
-}while(circuloX < width);
-    lineaY += 100;
-    circuloY += 200;
-    
-}while(lineaY < height);
+for(int x=30; x<width; x+=60){
+  stroke(0);
+  fill(random(0,255),random(0,255),random(0,255));
+  ellipse(x,y,40,40);
+}
+y+=200;
+}while(y<=height);
 }
